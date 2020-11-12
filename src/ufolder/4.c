@@ -6,20 +6,20 @@
 
 #include "4.h"
 
-#define DEPTH 5
+int DEPTH = 1;
+// #define M_LOG2E 1.44269504088896340736 // log2(e)
 
 //          1
 //     2          3
 //  4    5     6     7
 // 8 9 10 11 12 13 14 15
 
-// off = tid - 2^(log(tid))
-// sum = 2 * off = 4
-// next = 2^(next depth) + 4
-// next2 = 2^(next depth) + 4 + (1)
-
-void next_thread_tid(int tid) {
-    long off = tid - 2**(log);
+int next_thread_tid(long tid)
+{
+    int depth = log(tid) * M_LOG2E;
+    int off = tid - pow(2, depth);
+    int next_tid = pow(2, (depth + 1)) + (2 * off);
+    return next_tid;
 }
 
 void *depth(void *arg)
@@ -27,27 +27,29 @@ void *depth(void *arg)
     long tid = (long)arg;
     printf("%ld says HELLO!!!.\n", tid);
 
-    if (tid < DEPTH)
+    if ((int)(log(tid) * M_LOG2E) < DEPTH)
     {
-        pthread_t thread;
-        pthread_create(&thread, NULL, depth, (void *)(tid + 1));
-        pthread_join(thread, NULL);
+        long next_tid = next_thread_tid(tid);
+        pthread_t thread[2];
+        pthread_create(&thread[0], NULL, depth, (void *)(next_tid));
+        pthread_create(&thread[1], NULL, depth, (void *)(next_tid + 1));
     }
-    printf("I am thread number %ld, farewell.\n", tid);
+    printf("%ld says Goodbye___.\n", tid);
     pthread_exit(NULL);
 }
 
-void start_exercise_4(int n)
+void start_exercise_4(int tree_depth)
 {
-
     long tid = 1;
+    DEPTH = tree_depth;
     printf("%ld says HELLO!!!.\n", tid);
 
-    pthread_t thread;
-
-    pthread_create(&thread, NULL, depth, (void *)(tid + 1));
-    pthread_join(thread, NULL);
-
+    if (DEPTH > 0)
+    {
+        pthread_t thread[2];
+        pthread_create(&thread[0], NULL, depth, (void *)(tid + 1));
+        pthread_create(&thread[1], NULL, depth, (void *)(tid + 2));
+    }
     printf("%ld says Goodbye___.\n", tid);
     pthread_exit(NULL);
 }

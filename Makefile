@@ -16,7 +16,7 @@ default: show-info all
 # non-phony targets
 $(TARGET): build-subdirs $(OBJS) find-all-objs
 	@echo -e "\t" CC $(CCFLAGS) $(ALL_OBJS) $(MAIN_SRC) -o $@
-	@$(CC) $(CCFLAGS) $(ALL_OBJS) $(MAIN_SRC) -o $@
+	@$(CC) $(CCFLAGS) $(ALL_OBJS) $(MAIN_SRC) $(LASTCCFLAGS) -o $@
 
 # phony targets
 .PHONY: all

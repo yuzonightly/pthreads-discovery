@@ -5,6 +5,7 @@ MAKEFLAGS := --no-print-directory
 CC := gcc
 
 CCFLAGS := -pthread
+LASTCCFLAGS := -lm
 OBJCCFLAGS := $(CCFLAGS) -c
 
 # recursive make and clean
