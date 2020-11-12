@@ -8,6 +8,6 @@ Run ``make`` in the project root: ``pthreads-discovery/``.
 
 ## Run
 
-'''bash
+```bash
 $ ./pthreads.out [ExerciseNumber]
-'''
+```
