@@ -14,6 +14,9 @@ pthread_t THREADS[5];
 
 int TO_GUESS = 0;
 
+// https://stackoverflow.com/questions/16224469/pthreads-cancel-blocking-thread
+
+
 void *guess(void *arg)
 {
     long tid = (long)arg;

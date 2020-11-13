@@ -28,7 +28,6 @@ int main(int argc, char **argv)
     else if (strcmp(argv[1], "4") == 0)
     {
         int n;
-
         printf("Depth of the Threaded Tree: ");
         scanf("%d", &n);
 

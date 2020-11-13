@@ -7,7 +7,6 @@
 #include "4.h"
 
 int DEPTH = 1;
-// #define M_LOG2E 1.44269504088896340736 // log2(e)
 
 //          1
 //     2          3
@@ -16,6 +15,7 @@ int DEPTH = 1;
 
 int next_thread_tid(long tid)
 {
+    // From math.h: M_LOG2E.
     int depth = log(tid) * M_LOG2E;
     int off = tid - pow(2, depth);
     int next_tid = pow(2, (depth + 1)) + (2 * off);
@@ -27,6 +27,7 @@ void *depth(void *arg)
     long tid = (long)arg;
     printf("%ld says HELLO!!!.\n", tid);
 
+    // The current depth: log(tid) * M_LOG2E.
     if ((int)(log(tid) * M_LOG2E) < DEPTH)
     {
         long next_tid = next_thread_tid(tid);
