@@ -13,3 +13,9 @@ Run the following command in the project root:
 ```bash
 ./pthreads.out [ExerciseNumber]
 ```
+
+## Structure
+
+Folder structure:
+
+1. `src/ufolder`: solutions for ./Exercises__Inst_1.pdf.
