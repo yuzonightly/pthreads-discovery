@@ -25,10 +25,11 @@ int DEPTH = 1;
 void *depth(void *arg)
 {
     long tid = (long)arg;
-    printf("%ld says HELLO!!!.\n", tid);
-
     // The current depth: log(tid) * M_LOG2E.
-    if ((int)(log(tid) / log(2)) < DEPTH)
+    int level = (int)(log(tid) / log(2));
+    printf("%ld says HELLO!!! Depth: %d.\n", tid, level);
+
+    if (level < DEPTH)
     {
         // long next_tid = next_thread_tid(tid);
         pthread_t thread[2];
@@ -43,7 +44,7 @@ void start_exercise_4(int tree_depth)
 {
     long tid = 1;
     DEPTH = tree_depth;
-    printf("%ld says HELLO!!!.\n", tid);
+    printf("%ld says HELLO!!! Depth: 0.\n", tid);
 
     if (DEPTH > 0)
     {
