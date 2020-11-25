@@ -7,8 +7,9 @@
 #include "./src/ufolder/2.h"
 #include "./src/ufolder/3.h"
 #include "./src/ufolder/4.h"
-#include "./src/ufolder/5.h"
 #include "./src/ufolder/7.h"
+#include "./src/ufolder/8.h"
+#include "./src/ufolder/12.h"
 
 int main(int argc, char **argv)
 {
@@ -33,14 +34,18 @@ int main(int argc, char **argv)
 
         start_exercise_4(n);
     }
-    else if (strcmp(argv[1], "5") == 0)
+    else if (strcmp(argv[1], "7") == 0)
     {
-        start_exercise_5();
+        start_exercise_7();
     }
-    // else if (strcmp(argv[1], "7") == 0)
-    // {
-    //     start_exercise_7();
-    // }
+    else if (strcmp(argv[1], "8") == 0)
+    {
+        start_exercise_8();
+    }
+    else if (strcmp(argv[1], "12") == 0)
+    {
+        start_exercise_12();
+    }
     else
     {
         printf("Goodbye.\n");

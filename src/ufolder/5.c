@@ -6,16 +6,14 @@
 
 #include "5.h"
 
+// https://stackoverflow.com/questions/16224469/pthreads-cancel-blocking-thread
+
 #define NUM_THREADS 5
 #define RN_RANGE 1000000
 
 pthread_mutex_t LOCK;
 pthread_t THREADS[5];
-
 int TO_GUESS = 0;
-
-// https://stackoverflow.com/questions/16224469/pthreads-cancel-blocking-thread
-
 
 void *guess(void *arg)
 {
@@ -63,3 +61,4 @@ void start_exercise_5()
     }
     pthread_exit(NULL);
 }
+
