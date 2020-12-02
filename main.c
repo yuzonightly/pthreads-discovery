@@ -10,6 +10,9 @@
 #include "./src/ufolder/7.h"
 #include "./src/ufolder/8.h"
 #include "./src/ufolder/12.h"
+#include "./src/ufolder/12_mutex.h"
+#include "./src/ufolder/6_pi.h"
+#include "./src/ufolder/dot_product.h"
 
 int main(int argc, char **argv)
 {
@@ -45,6 +48,18 @@ int main(int argc, char **argv)
     else if (strcmp(argv[1], "12") == 0)
     {
         start_exercise_12();
+    }
+    else if (strcmp(argv[1], "12_mutex") == 0)
+    {
+        start_exercise_12_mutex();
+    }
+    else if (strcmp(argv[1], "6_pi") == 0)
+    {
+        start_exercise_pi_6();
+    }
+    else if (strcmp(argv[1], "dot") == 0)
+    {
+        start_exercise_dot_product();
     }
     else
     {
