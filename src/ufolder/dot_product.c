@@ -79,5 +79,5 @@ void start_exercise_dot_product()
     {
         pthread_join(threads[j], NULL);
     }
-    printf("MINIMUM VALUE: %d\n", DOT_PRODUCT);
+    printf("Dot Product : %d\n", DOT_PRODUCT);
 }
