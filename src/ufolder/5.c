@@ -61,4 +61,3 @@ void start_exercise_5()
     }
     pthread_exit(NULL);
 }
-

@@ -6,7 +6,8 @@
 #include "6_pi.h"
 
 #define NUM_THREADS 4
-// N; cannot be more than INT_MAX ( = 2^32-1 = 4294967295 )
+
+// N cannot be more than INT_MAX (2^32-1 = 4294967295)
 #define NUM_RANDOM_POINTS 100000
 
 int INSIDE_CIRCLE = 0;

@@ -5,7 +5,7 @@
 #include <time.h>
 
 #include "dot_product.h"
-// THIS and DOT PRODUCT for HOMEWORK (WHATELSE FOR HOMEWORK?) + TEST
+
 // 1GB of integers
 #define SIZE 1000
 

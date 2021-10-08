@@ -6,6 +6,7 @@
 
 #define NUM_THREADS 5
 pthread_mutex_t lock[NUM_THREADS];
+
 // Just use a counter.
 void *mutex_12(void *arg)
 {

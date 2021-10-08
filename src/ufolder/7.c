@@ -5,7 +5,7 @@
 #include <time.h>
 
 #include "7.h"
-// THIS and DOT PRODUCT for HOMEWORK (WHATELSE FOR HOMEWORK?) + EVALUATION_TEST
+
 // 1GB of integers
 #define SIZE 268435456
 
@@ -25,7 +25,7 @@ typedef struct
     int end;
 } range_t;
 
-// How to properly return or let the main flow get the result.
+// How to properly return or let main flow get the result.
 void *minimum(void *arg)
 {
     range_t *args = (range_t *)arg;

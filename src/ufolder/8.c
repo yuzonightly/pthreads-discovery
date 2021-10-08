@@ -49,7 +49,7 @@ void *matrix_mult(void *arg)
 
 void start_exercise_8()
 {
-    // Fill matrixes
+    // Fill matrices
     int i, j, fill;
     fill = 0;
     for (i = 0; i < MATRIX_A_L; i++)

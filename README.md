@@ -18,4 +18,4 @@ Run the following command in the project root:
 
 Folder structure:
 
-1. `src/ufolder`: solutions for ./Exercises__Inst_1.pdf.
+1. `src/ufolder`: solutions for ./Exercise_List.pdf.
