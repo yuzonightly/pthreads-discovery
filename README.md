@@ -4,18 +4,12 @@ Exercises involving POSIX Threads.
 
 ## Build
 
-Run `make` in the project root: `pthreads-discovery/`.
+```bash
+make
+```
 
 ## Run
 
-Run the following command in the project root:
-
 ```bash
-./pthreads.out [ExerciseNumber]
+./pthreads.out <exercise>
 ```
-
-## Structure
-
-Folder structure:
-
-1. `src/ufolder`: solutions for ./Exercise_List.pdf.
